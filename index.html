@@ -68,6 +68,18 @@ src="https://www.facebook.com/tr?id=3070798639780496&ev=PageView&noscript=1"
   .hero .meta div{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
   .hero .meta b{display:block;color:var(--cream);font-size:22px;font-family:'Playfair Display',serif;letter-spacing:0;text-transform:none;margin-top:4px}
 
+  /* mobile: stacked hero — poster on top, text on SOLID background below (no overlap) */
+  @media(max-width:720px){
+    .hero{display:block;min-height:auto}
+    .hero .bg{position:relative;height:72vh;min-height:420px;transform:none;background-position:center 18%}
+    .hero .bg::after{background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.25) 55%)}
+    .hero .inner{position:relative;padding:34px 24px 60px;background:var(--bg)}
+    .hero h1{font-size:clamp(38px,11vw,54px)}
+    .hero .sub{font-size:15.5px;margin-top:18px}
+    .hero .cta{margin-top:26px}
+    .hero .meta{margin-top:36px;gap:26px}
+  }
+
   .marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;background:var(--bg2)}
   .marquee .track{display:flex;gap:60px;white-space:nowrap;animation:scroll 30s linear infinite;width:max-content}
   .marquee span{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--muted)}
