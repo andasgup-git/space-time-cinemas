@@ -4,7 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Space-Time Cinemas — Distributing Bengali Cinema Worldwide</title>
-<meta name="description" content="Space-Time Cinemas — theatrical distribution, marketing and community engagement for Bengali cinema across the United States and the world.">
+<meta name="description" content="Space-Time Cinemas distributes Bengali cinema to global audiences. Now playing: Devi Chowdhurani — The Bandit Queen of Bengal, in US theatres September 4.">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3070798639780496');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3070798639780496&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -20,11 +37,9 @@
   .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
   .gold{color:var(--gold)}
 
-  /* grain */
   body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.05;z-index:99;
     background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-  /* nav */
   nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
       padding:18px 34px;background:rgba(8,8,8,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,175,55,.14)}
   nav .brand{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--gold);letter-spacing:.5px}
@@ -33,7 +48,6 @@
   nav .links a:hover{color:var(--gold)}
   @media(max-width:720px){nav .links{display:none}}
 
-  /* hero */
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
   .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;transform:scale(1.05)}
   .hero .bg::after{content:"";position:absolute;inset:0;
@@ -54,7 +68,6 @@
   .hero .meta div{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
   .hero .meta b{display:block;color:var(--cream);font-size:22px;font-family:'Playfair Display',serif;letter-spacing:0;text-transform:none;margin-top:4px}
 
-  /* marquee */
   .marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;background:var(--bg2)}
   .marquee .track{display:flex;gap:60px;white-space:nowrap;animation:scroll 30s linear infinite;width:max-content}
   .marquee span{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--muted)}
@@ -72,7 +85,6 @@
   .stats b{font-family:'Playfair Display',serif;font-size:40px;color:var(--gold);display:block}
   .stats span{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
 
-  /* filmography */
   .films{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:34px}
   .film{position:relative;overflow:hidden;border-radius:4px;background:var(--panel);border:1px solid var(--line)}
   .film .img{aspect-ratio:2/3;overflow:hidden;background:linear-gradient(160deg,#1c1a16,#0c0b09)}
@@ -93,6 +105,12 @@
   .featured .awards{margin-top:20px;display:flex;flex-direction:column;gap:8px}
   .featured .awards span{font-size:13px;color:var(--gold2)}
   .featured .tbtn{display:inline-block;margin-top:26px;background:var(--gold);color:#000;font-weight:600;text-decoration:none;padding:14px 30px;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;border-radius:2px}
+  .venues{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+  .venue{border:1px solid var(--line);background:var(--panel);padding:24px;border-radius:6px}
+  .venue h3{font-family:'Playfair Display',serif;font-size:19px;margin-bottom:6px}
+  .venue .city{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+  .venue p{color:var(--muted);font-size:13.5px;margin-top:10px}
+  .venue a{color:var(--gold);text-decoration:none;font-weight:600;font-size:14px}
 
   .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
   .svc{border:1px solid var(--line);padding:36px 30px;border-radius:4px;background:var(--panel);transition:border-color .3s,transform .3s}
@@ -120,7 +138,7 @@
 <nav>
   <div class="brand">SPACE-TIME<small>Cinemas</small></div>
   <div class="links">
-    <a href="#about">About</a><a href="#releases">Releases</a><a href="#services">Services</a><a href="#now">Now Playing</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#releases">Releases</a><a href="#venues">Venues</a><a href="#services">Services</a><a href="#now">Now Playing</a>
   </div>
 </nav>
 
@@ -132,20 +150,19 @@
     <p class="sub">Space-Time Cinemas distributes Bengali cinema to the world — theatrical releases, marketing engines and community partnerships across the United States and beyond.</p>
     <div class="cta">
       <a class="btn solid" href="#now">Now Playing</a>
-      <a class="btn ghost" href="#releases">Our Releases</a>
+      <a class="btn ghost" href="#venues">Where to Watch</a>
     </div>
     <div class="meta">
-      <div>US Metros<b>10</b></div>
+      <div>US Metros<b>6</b></div>
       <div>Teaser Views<b>2M+</b></div>
-      <div>Community Orgs<b>15+</b></div>
       <div>Next Release<b>Sep 4</b></div>
     </div>
   </div>
 </div>
 
 <div class="marquee"><div class="track">
-  <span>দেবী চৌধুরানী <b>·</b> The Bandit Queen of Bengal</span><span>In US Theatres <b>September 4</b></span><span>Houston <b>·</b> Dallas <b>·</b> Chicago <b>·</b> Seattle <b>·</b> Orlando <b>·</b> Austin <b>·</b> Columbus <b>·</b> LA <b>·</b> SF Bay <b>·</b> NY/NJ</span><span>Labor Day Weekend <b>·</b> Sep 4-7</span>
-  <span>দেবী চৌধুরানী <b>·</b> The Bandit Queen of Bengal</span><span>In US Theatres <b>September 4</b></span><span>Houston <b>·</b> Dallas <b>·</b> Chicago <b>·</b> Seattle <b>·</b> Orlando <b>·</b> Austin <b>·</b> Columbus <b>·</b> LA <b>·</b> SF Bay <b>·</b> NY/NJ</span><span>Labor Day Weekend <b>·</b> Sep 4-7</span>
+  <span>দেবী চৌধুরানী <b>·</b> The Bandit Queen of Bengal</span><span>In US Theatres <b>September 4</b></span><span>Houston <b>·</b> Dallas <b>·</b> Chicago <b>·</b> Austin <b>·</b> Columbus <b>·</b> Los Angeles <b>·</b> SF Bay Area</span><span>Labor Day Weekend <b>·</b> Sep 4-7</span>
+  <span>দেবী চৌধুরানী <b>·</b> The Bandit Queen of Bengal</span><span>In US Theatres <b>September 4</b></span><span>Houston <b>·</b> Dallas <b>·</b> Chicago <b>·</b> Austin <b>·</b> Columbus <b>·</b> Los Angeles <b>·</b> SF Bay Area</span><span>Labor Day Weekend <b>·</b> Sep 4-7</span>
 </div></div>
 
 <section id="about"><div class="wrap">
@@ -156,8 +173,8 @@
   </div>
   <div class="stats reveal">
     <div><b>2M+</b><span>Teaser views</span></div>
-    <div><b>10</b><span>US markets</span></div>
-    <div><b>3</b><span>Cine Lounge shows live</span></div>
+    <div><b>6</b><span>US markets</span></div>
+    <div><b>2</b><span>Cine Lounge venues live</span></div>
     <div><b>9th</b><span>London BFF closing film</span></div>
   </div>
   <div class="quote reveal" style="margin-top:70px">
@@ -170,7 +187,7 @@
   <div class="sec-head reveal">
     <div class="kicker">Releases</div>
     <h2>Films we've brought<br>to the world.</h2>
-    <p>Every title we distribute carries Bengali cinema further. Our catalogue grows release by release — the latest chapter is <em>Devi Chowdhurani</em>.</p>
+    <p>Every title we distribute carries Bengali cinema further. The latest chapter: <em>Devi Chowdhurani</em> — in US theatres September 4.</p>
   </div>
   <div class="featured reveal">
     <div class="poster"><img src="assets/master-poster.jpg" alt="Devi Chowdhurani poster"></div>
@@ -184,18 +201,26 @@
         <span>★ Best Film (Popular Choice) — NABC IFFA 2026, New York</span>
         <span>★ First official Indo-UK co-production in Bengali cinema</span>
       </div>
-      <a class="tbtn" href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Book Tickets — Cine Lounge Fremont</a>
+      <a class="tbtn" href="#venues">Find Tickets</a>
     </div>
   </div>
-  <div class="films reveal" style="margin-top:64px">
-    <div class="film">
-      <div class="img" style="display:flex;align-items:center;justify-content:center"><span style="font-size:40px">🎬</span></div>
-      <div class="cap"><div class="yr">Next up</div><h3>Devi Chowdhurani</h3><p>US theatrical — September 4, 2026</p><span class="tag">NOW BOOKING</span></div>
-    </div>
-    <div class="film">
-      <div class="img" style="display:flex;align-items:center;justify-content:center"><span style="font-size:40px">🌍</span></div>
-      <div class="cap"><div class="yr">Catalogue</div><h3>Years of releases</h3><p>Our distribution history spans years of Bengali cinema — details being added from the archive.</p></div>
-    </div>
+</div></section>
+
+<section id="venues"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="kicker">Where to Watch</div>
+    <h2>Opening September 4<br>in seven cities.</h2>
+  </div>
+  <div class="venues reveal">
+    <div class="venue"><div class="city">SF Bay Area</div><h3>Cinemark Union City 25 + XD</h3><p>Union City, CA · <a href="https://www.cinemark.com/movies/devi-chowdhurani-bengali-with-english-subtitles">Showtimes &amp; tickets</a></p></div>
+    <div class="venue"><div class="city">SF Bay Area</div><h3>Cine Lounge Fremont</h3><p>Fremont, CA · Sep 5-7 · <a href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Book tickets</a></p></div>
+    <div class="venue"><div class="city">Chicago</div><h3>Cine Lounge Niles</h3><p>Niles, IL · Sep 4-6 · <a href="https://niles.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Book tickets</a></p></div>
+    <div class="venue"><div class="city">Chicago</div><h3>Cinemark 16 + IMAX</h3><p>Woodridge, IL · <a href="https://www.cinemark.com/movies/devi-chowdhurani-bengali-with-english-subtitles">Showtimes coming</a></p></div>
+    <div class="venue"><div class="city">Dallas</div><h3>Cinemark Legacy 24 + XD</h3><p>Plano, TX · <a href="https://www.cinemark.com/movies/devi-chowdhurani-bengali-with-english-subtitles">Showtimes &amp; tickets</a></p></div>
+    <div class="venue"><div class="city">Austin</div><h3>Cinemark Cedar Park 12</h3><p>Cedar Park, TX · 6 PM daily Sep 4-9 · <a href="https://www.cinemark.com/TicketSeatMap/?TheaterId=1032&ShowtimeId=413106&CinemarkMovieId=112431&Showtime=2026-09-04T18:00:00">Book Sep 4</a></p></div>
+    <div class="venue"><div class="city">Columbus</div><h3>Cinemark Movies 16</h3><p>Gahanna, OH · <a href="https://www.cinemark.com/movies/devi-chowdhurani-bengali-with-english-subtitles">Showtimes coming</a></p></div>
+    <div class="venue"><div class="city">Los Angeles</div><h3>Cinemark 14 @ The Pike + XD</h3><p>Long Beach, CA · <a href="https://www.cinemark.com/movies/devi-chowdhurani-bengali-with-english-subtitles">Showtimes coming</a></p></div>
+    <div class="venue"><div class="city">Houston</div><h3>AMC Houston First Colony 24</h3><p>Houston, TX · <a href="https://www.amctheatres.com">Showtimes coming</a></p></div>
   </div>
 </div></section>
 
@@ -216,21 +241,15 @@
   <div class="sec-head reveal">
     <div class="kicker">Now Playing</div>
     <h2>Book your seats<br>this weekend.</h2>
-    <p>Tickets are live for the Labor Day long weekend — Cine Lounge Fremont, Sep 5-7. More theatres and links announced daily.</p>
+    <p>Tickets are live at Cine Lounge Fremont &amp; Niles and Cinemark Union City &amp; Cedar Park — with more venues posting showtimes daily.</p>
   </div>
-  <div class="films reveal">
-    <div class="film">
-      <div class="img"><img src="assets/theatre-list.jpg" alt="Theatre list"></div>
-      <div class="cap"><div class="yr">Theatres</div><h3>Where to watch</h3><p>Houston · Dallas · Chicago · Seattle · Orlando · Austin · Columbus · LA · SF Bay · NY/NJ</p></div>
-    </div>
-  </div>
-  <div style="margin-top:40px">
-    <a class="btn solid" href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Book — Cine Lounge Fremont</a>
+  <div style="margin-top:10px">
+    <a class="btn solid" href="https://www.cinemark.com/movies/devi-chowdhurani-bengali-with-english-subtitles">Cinemark Tickets</a>
     <a class="btn ghost" style="margin-left:12px" href="https://www.facebook.com/events/942171612261069/">RSVP — Release Event</a>
   </div>
 </div></section>
 
-<footer id="contact"><div class="wrap">
+<footer><div class="wrap">
   <div class="cols">
     <div>
       <h4>Space-Time Cinemas</h4>
@@ -239,13 +258,12 @@
     <div>
       <h4>Follow</h4>
       <a href="https://www.facebook.com/163375677531149">Facebook</a>
-      <a href="#">Instagram</a>
       <a href="https://andasgup-git.github.io/adited-motionpictures/">ADited Motion Pictures</a>
     </div>
     <div>
       <h4>Now</h4>
-      <a href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Book tickets</a>
-      <a href="https://www.facebook.com/events/942171612261069/">Release event</a>
+      <a href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Cine Lounge Fremont</a>
+      <a href="https://niles.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Cine Lounge Niles</a>
     </div>
   </div>
   <div class="copy"><span>© 2026 Space-Time Cinemas · Bengali cinema, worldwide</span><span>Delivering the Bengali story to every screen.</span></div>
